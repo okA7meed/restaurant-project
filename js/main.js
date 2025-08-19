@@ -191,3 +191,29 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
+
+// التمرير إلى الأعلى عند تحميل الصفحة
+window.addEventListener('load', function() {
+    // الانتقال إلى القسم الرئيسي
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+        window.scrollTo({
+            top: homeSection.offsetTop,
+            behavior: 'instant' // بدون تأثير حركي
+        });
+    }
+    
+    // أو الانتقال إلى أعلى الصفحة مباشرة
+    window.scrollTo(0, 0);
+});
+
+// منع السلوك الافتراضي للروابط
+document.querySelectorAll('a[href="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
