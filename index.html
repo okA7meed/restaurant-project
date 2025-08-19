@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مطعمنا - الصفحة الرئيسية</title>
+ <link rel="icon" type="image/png" href="/IMG/pngwing.com.png">
+  
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Local font (JF Flat) -->
+  <style>
+    @font-face {
+      font-family: 'JF Flat';
+      src: url('fonts/JFFlat-Bold.ttf') format('truetype');
+    }
+
+    /* طلبك: إزالة الخط السفلي للروابط ولون افتراضي أسود */
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* نضمن سلاسة التمرير (يعمل مع fallback الـ JS) */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- AOS (Animate On Scroll) script and init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out'
+    });
+  </script>
+
+  <!-- ===========================
+       Header
+       =========================== -->
+  <header class="sticky-header">
+    <div class="container">
+      <img src="/IMG/pngwing.com.png" alt="شعار المطعم" class="logo" />
+
+         
+            <!-- أيقونة الهامبرجر -->
+            <div class="hamburger-menu">☰</div>
+            
+            <!-- القائمة الرئيسية -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#menu">قائمة الطعام</a></li>
+                    <li><a href="#offers">العروض</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+
+        <!-- Buttons (theme toggle + reserve) -->
+        <div class="nav-buttons">
+          <!-- Dark mode toggle -->
+          <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع">
+            <i class="fas fa-moon light-icon" aria-hidden="true"></i>
+            <i class="fas fa-sun dark-icon" aria-hidden="true" style="display:none;"></i>
+          </button>
+          
+          <a href="#contact" class="reserve-btn">احجز الآن</a>
+        </div>
+      </nav>
+    
+ 
+    </div>
+  </header>
+
+  <!-- ===========================
+       Hero Section
+       =========================== -->
+       <section class="hero">
+    <div class="hero-background"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1>استمتع بألذ الوجبات الطازجة</h1>
+            <p>مطعمنا يقدم أفضل الأطباق المعدة من مكونات طازجة يومياً</p>
+            <button class="cta-btn">عرض القائمة</button>
+        </div>
+    </div>
+</section>
+  
+
+
+  <!-- ===========================
+       Why Choose Us / Features
+       =========================== -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">لماذا تختارنا؟</h2>
+
+      <div class="features-grid">
+        <div class="feature-item slide-up" data-aos="fade-up">
+          
+          <h3>مكونات طازجة</h3>
+          <p>نستخدم مكونات طازجة ومحلية يومياً</p>
+        </div>
+
+        <div class="feature-item slide-up" data-aos="fade-up" data-aos-delay="100">
+          
+          <h3>طهاة محترفون</h3>
+          <p>فريقنا من الطهاة ذوي الخبرة الواسعة</p>
+        </div>
+
+        <div class="feature-item slide-up" data-aos="fade-up" data-aos-delay="200">
+          
+          <h3>وصفات خاصة</h3>
+          <p>وصفاتنا السرية تميزنا عن الآخرين</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Menu Section
+       =========================== -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <h2 class="section-title">قائمة الطعام</h2>
+  
+      <div class="menu-filter">
+        <button class="filter-btn active" data-category="all">الكل</button>
+        <button class="filter-btn" data-category="drinks">المشروبات</button>
+        <button class="filter-btn" data-category="desserts">الحلويات</button>
+        <button class="filter-btn" data-category="main">الوجبات الرئيسية</button>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item" data-category="drinks">
+          <img src="/IMG/lemonade.webp" alt="ليمونادة" />
+          <div class="menu-item-info">
+            <h4>ليمونادة</h4>
+            <p class="price">$18.00</p>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="drinks">
+          <img src="/IMG/mojito00.jpg" alt="موهيتو" />
+          <div class="menu-item-info">
+            <h4>موهيتو</h4>
+            <p class="price">$20.00</p>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="desserts">
+          <img src="/IMG/cheesecake.jpg" alt="تشيز كيك" />
+          <div class="menu-item-info">
+            <h4>تشيز كيك</h4>
+            <p class="price">$28.00</p>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="desserts">
+          <img src="/IMG/chocolate cake.jpg" alt="كيكة الشوكولاتة" />
+          <div class="menu-item-info">
+            <h4>كيكة الشوكولاتة</h4>
+            <p class="price">$30.00</p>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="main">
+          <img src="/IMG/steak.webp" alt="ستيك لحم" />
+          <div class="menu-item-info">
+            <h4>ستيك لحم</h4>
+            <p class="price">$45.00</p>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="main">
+          <img src="/IMG/salmon.jpg" alt="سمك سلمون" />
+          <div class="menu-item-info">
+            <h4>سمك سلمون</h4>
+            <p class="price">$40.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Special Offers
+       =========================== -->
+  <section id="offers" class="offer-section">
+    <div class="container">
+      <div class="offer-card">
+        <div class="offer-image">
+          <img src="/IMG/off20.png" alt="عرض خاص" />
+        </div>
+
+        <div class="offer-content">
+          <h2>عرض خاص محدود!</h2>
+          <p class="offer-description">احصل على خصم 20% على جميع الوجبات الرئيسية عند الحجز خلال الوقت المتبقي ! </p>
+
+          <div class="countdown-container">
+            <div class="countdown-box">
+              <span id="days" class="countdown-value">00</span>
+              <span class="countdown-label">أيام</span>
+            </div>
+            <div class="countdown-box">
+              <span id="hours" class="countdown-value">00</span>
+              <span class="countdown-label">ساعات</span>
+            </div>
+            <div class="countdown-box">
+              <span id="minutes" class="countdown-value">00</span>
+              <span class="countdown-label">دقائق</span>
+            </div>
+            <div class="countdown-box">
+              <span id="seconds" class="countdown-value">00</span>
+              <span class="countdown-label">ثواني</span>
+            </div>
+          </div>
+
+          <button class="offer-btn">احصل على العرض الآن</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Testimonials
+       =========================== -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">آراء عملائنا</h2>
+
+        <div class="testimonials-grid"> <!-- تغيير من slider إلى grid -->
+            <div class="testimonial">
+                <div class="client-image">
+                    <img src="/IMG/unnamed.png" alt="أحمد محمد">
+                </div>
+                <div class="testimonial-content">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">" الطعام لذيذ والخدمة ممتازة"</p>
+                    <cite class="client-name">- أحمد محمد</cite>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="client-image">
+                    <img src="/IMG/unnamed.png" alt="محمد خالد">
+                </div>
+                <div class="testimonial-content">
+                    <div class="rating">★★★★☆</div>
+                    <p class="testimonial-text">"تجربة رائعة، سأعود بالتأكيد مع أصدقائي"</p>
+                    <cite class="client-name">- محمد خالد</cite>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="client-image">
+                    <img src="/IMG/unnamed.png" alt="علي محمود">
+                </div>
+                <div class="testimonial-content">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"الأجواء رائعة والطعام يستحق كل فلس"</p>
+                    <cite class="client-name">- علي محمود</cite>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+      <div class="testimonial-nav">
+        <button class="prev-testimonial">❮</button>
+        <div class="testimonial-dots"></div>
+        <button class="next-testimonial">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Contact & Reservation
+       =========================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reservation-form">
+          <h2 class="section-title">الحجز</h2>
+
+          <form id="booking-form">
+            <input type="text" placeholder="الاسم" required />
+            <input type="tel" placeholder="رقم الهاتف" required />
+            <input type="date" placeholder="التاريخ" required />
+            <input type="number" placeholder="عدد الأشخاص" min="1" required />
+            <button type="submit" class="reserve-btn">احجز الآن</button>
+          </form>
+        </div>
+
+        <div class="map">
+          <iframe src="https://maps.google.com/maps?q=restaurant+location&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Footer
+       =========================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-links">
+          <a href="#">عن المطعم</a>
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">الشروط والأحكام</a>
+        </div>
+
+      <div class="social-media">
+  <a href="رابط-الفيسبوك" class="social-icon" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="رابط-تويتر" class="social-icon" target="_blank">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="رابط-انستجرام" class="social-icon" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="رابط-سنابشات" class="social-icon" target="_blank">
+    <i class="fab fa-snapchat-ghost"></i>
+  </a>
+  <a href="رابط-تيكتوك" class="social-icon" target="_blank">
+    <i class="fab fa-tiktok"></i>
+  </a>
+</div>
+        <div class="copyright">
+          <p>© 2025 مطعمنا. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===========================
+       Inline scripts for behavior
+       =========================== -->
+  <script>
+    // Dark mode toggle (switch class on body and swap icons)
+    (function() {
+      const toggle = document.getElementById('theme-toggle');
+      if (!toggle) return;
+
+      const lightIcon = toggle.querySelector('.light-icon');
+      const darkIcon = toggle.querySelector('.dark-icon');
+
+      // restore preference if stored
+      const stored = localStorage.getItem('site-dark-mode');
+      if (stored === '1') {
+        document.body.classList.add('dark-mode');
+        if (lightIcon) lightIcon.style.display = 'none';
+        if (darkIcon) darkIcon.style.display = 'inline-block';
+      }
+
+      toggle.addEventListener('click', function () {
+        const isDark = document.body.classList.toggle('dark-mode');
+        // swap icons
+        if (isDark) {
+          if (lightIcon) lightIcon.style.display = 'none';
+          if (darkIcon) darkIcon.style.display = 'inline-block';
+          localStorage.setItem('site-dark-mode', '1');
+        } else {
+          if (lightIcon) lightIcon.style.display = 'inline-block';
+          if (darkIcon) darkIcon.style.display = 'none';
+          localStorage.setItem('site-dark-mode', '0');
+        }
+      });
+    })();
+
+    // Smooth anchor scrolling with header offset compensation
+    (function() {
+      // Apply to all internal anchors starting with #
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (!href || href === '#') return;
+          const target = document.querySelector(href);
+          if (!target) return;
+
+          // Let normal link work for external anchors like '#', but we intercept to adjust offset
+          e.preventDefault();
+
+          const header = document.querySelector('.sticky-header');
+          const headerHeight = header ? header.offsetHeight : 90;
+
+          const rect = target.getBoundingClientRect();
+          const absoluteTop = rect.top + window.pageYOffset;
+          const offsetPosition = absoluteTop - headerHeight - 10; // 10px padding
+
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
+          // Update URL without page jump
+          history.pushState(null, '', href);
+        });
+      });
+    })();
+  </script>
+
+  <!-- Other scripts (kept as before) -->
+  <script src="/js/menu-filter.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/countdown.js"></script>
+</body>
+</html>
